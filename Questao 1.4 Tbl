@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Cliente: ");
+        string cliente = Console.ReadLine();
+
+        double total = 0;
+        string opcao;
+
+        do
+        {
+            Console.Write("Produto: ");
+            string produto = Console.ReadLine();
+
+            Console.Write("Preço: ");
+            double preco = double.Parse(Console.ReadLine());
+
+            Console.Write("Quantidade: ");
+            int qtd = int.Parse(Console.ReadLine());
+
+            total += preco * qtd;
+
+            Console.Write("Adicionar outro? (S/N): ");
+            opcao = Console.ReadLine().ToUpper();
+
+        } while (opcao == "S");
+
+        Console.Write("Pagamento: ");
+        string pagamento = Console.ReadLine();
+
+        Console.WriteLine("\nCliente: " + cliente);
+        Console.WriteLine("Total: R$ " + total.ToString("F2"));
+        Console.WriteLine("Pagamento: " + pagamento);
+    }
+}
