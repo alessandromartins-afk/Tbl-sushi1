@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> carrinho = new List<string>();
+
+        carrinho.Add("Teclado");
+        carrinho.Add("Mouse");
+
+        Console.WriteLine("---- Carrinho ----");
+
+        foreach (string produto in carrinho)
+        {
+            Console.WriteLine(produto);
+        }
+    }
+}
