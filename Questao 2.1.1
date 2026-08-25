@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> carrinho = new List<string>();
+        List<double> precos = new List<double>();
+
+        carrinho.Add("Teclado");
+        precos.Add(100);
+
+        carrinho.Add("Mouse");
+        precos.Add(50);
+
+        Console.WriteLine("---- Carrinho ----");
+
+        for (int i = 0; i < carrinho.Count; i++)
+        {
+            Console.WriteLine(carrinho[i] + " - R$ " + precos[i]);
+        }
+
+        Console.Write("Digite o produto que deseja remover: ");
+        string remover = Console.ReadLine();
+
+        int posicao = carrinho.IndexOf(remover);
+
+        if (posicao >= 0)
+        {
+            carrinho.RemoveAt(posicao);
+            precos.RemoveAt(posicao);
+            Console.WriteLine("Produto removido!");
+        }
+
+        double total = 0;
+
+        foreach (double preco in precos)
+        {
+            total += preco;
+        }
+
+        Console.WriteLine("Total: R$ " + total);
+
+        Console.Write("Forma de pagamento: ");
+        string pagamento = Console.ReadLine();
+
+        Console.WriteLine("Pagamento escolhido: " + pagamento);
+    }
+}
