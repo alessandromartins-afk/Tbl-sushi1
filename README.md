@@ -14,3 +14,6 @@ Para implementar a funcionalidade de desconto, primeiro deve-se definir a necess
 ========================================================================================================================================================================================================
 
 Questão 2
+No primeiro incremento Já existiam definição dos produtos, a possibilidade de adiciona-los ao carrinho e a visualização do carrinho. No segundo incremento foram acrescentados o calculo do total, a remoção de produtos e a escolha da forma de pagamento. A primeira versão precisou ser ampliada para armazenar tambem os preços as novas operações.
+Alteração feita
+A nova regra determina que os produtos acima de 500 reais recebem 10% de desconto. O sistema verificaria o preço de cada produto e caso fosse superior a 500 reais e aplicaria o desconto de acordo.
