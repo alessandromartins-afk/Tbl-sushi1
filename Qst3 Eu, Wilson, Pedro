@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> salas = new List<string>();
+        List<string> responsaveis = new List<string>();
+        List<string> reservas = new List<string>();
+
+        salas.Add("Sala 1");
+        salas.Add("Sala 2");
+        salas.Add("Sala 3");
+
+        responsaveis.Add("João");
+        responsaveis.Add("Maria");
+
+        Console.WriteLine("=== SALAS DISPONÍVEIS ===");
+
+        foreach (string sala in salas)
+        {
+            Console.WriteLine(sala);
+        }
+
+        Console.Write("\nEscolha uma sala: ");
+        string salaEscolhida = Console.ReadLine();
+
+        Console.Write("Responsável: ");
+        string responsavel = Console.ReadLine();
+
+        Console.Write("Data: ");
+        string data = Console.ReadLine();
+
+        Console.Write("Horário: ");
+        string horario = Console.ReadLine();
+
+        reservas.Add(
+            "Sala: " + salaEscolhida +
+            " | Responsável: " + responsavel +
+            " | Data: " + data +
+            " | Horário: " + horario
+        );
+
+        Console.WriteLine("\n=== RESERVAS REALIZADAS ===");
+
+        foreach (string reserva in reservas)
+        {
+            Console.WriteLine(reserva);
+        }
+    }
+}
